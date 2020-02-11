@@ -3,6 +3,8 @@ class CreateTableWebsites < ActiveRecord::Migration[5.2]
     create_table(:websites) do |t|
       t.string :title
       t.string :url
+
+      t.timestamps
     end
   end
 end
