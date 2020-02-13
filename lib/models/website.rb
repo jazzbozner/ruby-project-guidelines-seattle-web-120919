@@ -11,7 +11,7 @@ class Website < ActiveRecord::Base
   end
 
   def self.adding_website
-    puts "_________________________________________________"
+    puts "_________________________________________________________________________________________________"
     puts "Please input the URL of the website"
     puts "To cancel, please press (ENTER)."
     website = Website.new
@@ -19,11 +19,11 @@ class Website < ActiveRecord::Base
     if !Website.exists?(url: website_url) && website_url != ""
       website.url = website_url
       website.save
-      puts "_______________________________________"
-      puts "Website has been created #{website.url}"
-    elsif Website.exists?(url: website.url)
-      puts "_____________________________________"
-      puts "The Website is active in our records."
+      puts "_________________________________________________________________________________________________"
+      puts "Website has been created #{website.url}".colorize(:green)
+    elsif Website.exists?(url: website_url)
+      puts "_________________________________________________________________________________________________"
+      puts "The Website is active in our records.".colorize(:red)
     elsif website.url == ""
     end
   end

@@ -1,7 +1,3 @@
-require "tty-prompt"
-require "artii"
-require "pry"
-
 class CommandLineInterface
   $prompt = TTY::Prompt.new
 
@@ -17,27 +13,32 @@ class CommandLineInterface
   ## MAIN MENU METHODS ##
 
   def greet
-    puts "     Welcome to Not So Safe Vault       "
+    puts "                                        "
+    puts "     Welcome to Not So Safe Vault       ".colorize(:green)
+    puts "________________________________________".colorize(:yellow)
     puts "Lets keep your account info not so safe."
+    puts "                                        "
   end
 
   def login
     name = $prompt.ask("What is your name?", default: "User")
     puts ""
+    puts "_________________________________________________________________________________________________".colorize(:yellow)
     puts "Welcome, #{name}!"
   end
 
   def main_menu
     puts ""
-    choices = "What would you like to accomplish? (Use ↑/↓ arrow keys, press Space to select and Enter to finish)"
+    choices = "What would you like to accomplish? (Use arrow keys, press Enter to finish)"
     options = [
       "Show all Websites",
       "Show all Users",
       "Show all Accounts",
-      "Add Website", "Add User",
-      "Add Account", "Update Account Info",
-      "Delete Website Info",
-      #"View User's Accounts",
+      "Add Website",
+      "Add User",
+      "Add Account",
+      "Update Account Info",
+      "Delete Account Info",
       "Exit",
     ]
     selection = $prompt.select(choices, options)
@@ -62,19 +63,17 @@ class CommandLineInterface
     elsif selection == "Update Account Info" #complete
       Account.update_account_info
       main_menu
-    elsif selection == "Delete Website Info" #complete
+    elsif selection == "Delete Account Info" #complete
       Account.delete_account
       main_menu
-      # elsif selection == "View User's Accounts"
-      #   Account.account_age
-      #   main_menu
     elsif selection == "Exit" #complete
       exit_message
     end
   end
 
   def exit_message
-    puts "Thank you for using Not So Safe Vault"
+    puts "_____________________________________".colorize(:yellow)
+    puts "Thank you for being not so safe."
     sleep 1
     puts "Good Bye"
     sleep 1

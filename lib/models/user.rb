@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   end
 
   def self.adding_user
-    puts "_________________________________________________"
+    puts "_________________________________________________________________________________________________"
     puts "Please input the name of the User"
     puts "To cancel, please press (ENTER)."
     user = User.new
@@ -19,11 +19,11 @@ class User < ActiveRecord::Base
     if !User.exists?(name: user_name) && user_name != ""
       user.name = user_name
       user.save
-      puts "__________________________________"
-      puts "User has been created #{user.name}"
-    elsif User.exists?(name: user.name)
-      puts "_____________________________________"
-      puts "The User is active in our records."
+      puts "_________________________________________________________________________________________________"
+      puts "User has been created: #{user.name}".colorize(:green)
+    elsif User.exists?(name: user_name)
+      puts "_________________________________________________________________________________________________"
+      puts "The User is active in our records.".colorize(:red)
     elsif user_name == ""
     end
   end
