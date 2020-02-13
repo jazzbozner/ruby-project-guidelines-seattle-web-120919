@@ -1,12 +1,17 @@
-User.create(name: "Jazz", username: "Dj-jazzyjeff", password: "456")
-User.create(name: "Zian", username: "Lt.Din'ah", password: "123")
+User.create(name: "Jazz")
+User.create(name: "Zian")
 
-Website.create(title: "Google", url: "http://www.google.com")
-Website.create(title: "Youtube", url: "http://www.youtube.com")
-Website.create(title: "Twitch", url: "http://www.twitch.tv")
-Website.create(title: "Tinder", url: "http://www.tinder.com")
-Website.create(title: "Farmers Only", url: "http://www.farmersonly.com")
+Website.create(url: "http://www.google.com")
+Website.create(url: "http://www.youtube.com")
+Website.create(url: "http://www.twitch.tv")
+Website.create(url: "http://www.tinder.com")
+Website.create(url: "http://www.farmersonly.com")
+Website.create(url: "http://www.amazon.com")
 
-10.time do
-  Account.create(user_id: User.all.sample.id, website_id: Website.all.sample.id)
-end
+Account.create(user_id: 1, website_id: 1, username: "Dj-jazzyjeff", password: "123")
+Account.create(user_id: 1, website_id: 2, username: "jazzbozner", password: "123")
+Account.create(user_id: 1, website_id: 3, username: "jbozner", password: "12345")
+Account.create(user_id: 1, website_id: 6, username: "jazzbozner@gmail.com", password: "12345")
+Account.create(user_id: 2, website_id: 4, username: "Lt.Din'ah", password: "00000")
+Account.create(user_id: 2, website_id: 5, username: "ziandina", password: "00001")
+Account.create(user_id: 2, website_id: 6, username: "ziandina@amazon.com", password: "010101")
