@@ -2,6 +2,7 @@ class Account < ActiveRecord::Base
   belongs_to :user
   belongs_to :website
 
+  # Prints out each instance of the accounts table
   def self.view_all_accounts
     Account.all.each do |account|
       puts "__________________________________________".colorize(:yellow)
@@ -13,6 +14,8 @@ class Account < ActiveRecord::Base
     sleep 0.5
   end
 
+  # allows you to add an account with existing user and website
+  # several checks included to ensure account doesn't already exist
   def self.add_account
     command = "Please select User. (Use arrow keys, press Space to select and Enter to finish)"
     options = User.all.map { |user| user.name }
@@ -60,6 +63,9 @@ class Account < ActiveRecord::Base
     end
   end
 
+  # allows you to select specific account
+  # choose which attribute you would like to update
+  # and update that account's username/password
   def self.update_account_info
     command = "Please select to update? (Use arrow keys, press Space to select and Enter to finish)"
     options = ["Username", "Password"]
@@ -99,6 +105,8 @@ class Account < ActiveRecord::Base
     end
   end
 
+  # deletes the instance of the account without deleting
+  # the user and the website
   def self.delete_account
     self.view_all_accounts
     puts "_________________________________________________________________________________________________"
@@ -109,18 +117,5 @@ class Account < ActiveRecord::Base
     end
     puts "_________________________________________________________________________________________________"
     puts "Account has been deleted!".colorize(:green)
-  end
-
-  def self.last_updated_account
-    Account.all.sort do |account|
-    end
-    Account.find_by(account.update_at)
-  end
-
-  def self.account_age
-    Account.all.each do |account|
-      account_age = Time.now - account.updated_at
-    end
-    account_age
   end
 end

@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   has_many :accounts
   has_many :websites, through: :accounts
 
+  # shows all the users available in the database
   def self.show_all_users
     User.all.each do |user|
       puts user.name
@@ -9,7 +10,8 @@ class User < ActiveRecord::Base
     menu = "Press any key to continue, resumes automatically in one minute ..."
     $prompt.keypress(menu, timeout: 60)
   end
-
+  # addes a user to the database,
+  # also checks to see if the user's name is already included
   def self.adding_user
     puts "_________________________________________________________________________________________________"
     puts "Please input the name of the User"

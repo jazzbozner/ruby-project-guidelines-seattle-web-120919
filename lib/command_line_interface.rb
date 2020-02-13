@@ -57,7 +57,7 @@ class CommandLineInterface
     elsif selection == "Add User" #complete
       User.adding_user
       main_menu
-    elsif selection == "Add Account" #complete - Make accounts easier to read
+    elsif selection == "Add Account" #complete
       Account.add_account
       main_menu
     elsif selection == "Update Account Info" #complete

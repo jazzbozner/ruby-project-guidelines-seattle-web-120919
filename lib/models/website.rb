@@ -2,6 +2,7 @@ class Website < ActiveRecord::Base
   has_many :accounts
   has_many :users, through: :accounts
 
+  # shows all the websites available in the database
   def self.show_all_websites
     Website.all.map do |website|
       puts website.url
@@ -10,6 +11,8 @@ class Website < ActiveRecord::Base
     $prompt.keypress(menu, timeout: 60)
   end
 
+  # allows you to add a website to the database
+  # checks to see if that website already exists based off of URL
   def self.adding_website
     puts "_________________________________________________________________________________________________"
     puts "Please input the URL of the website"
