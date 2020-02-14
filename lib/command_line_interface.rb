@@ -13,9 +13,15 @@ class CommandLineInterface
   ## MAIN MENU METHODS ##
 
   def greet
-    puts "                                        "
-    puts "     Welcome to Not So Safe Vault       ".colorize(:green)
-    puts "________________________________________".colorize(:yellow)
+    puts "/$$   /$$             /$$                                                 /$$$$$$           /$$    /$$                    /$$   /$$".colorize(:green)
+    puts "| $$$ | $$            | $$                                                /$$__  $$         | $$   | $$                   | $$  | $$  ".colorize(:green)
+    puts '| $$$$| $$  /$$$$$$  /$$$$$$     /$$$$$$$  /$$$$$$     /$$$$$$$  /$$$$$$ | $$  \__//$$$$$$  | $$   | $$ /$$$$$$  /$$   /$$| $$ /$$$$$$| '.colorize(:green)
+    puts "| $$ $$ $$ /$$__  $$|_  $$_/    /$$_____/ /$$__  $$   /$$_____/ |____  $$| $$$$   /$$__  $$ |  $$ / $$/|____  $$| $$  | $$| $$|_  $$_/  ".colorize(:green)
+    puts '| $$  $$$$| $$  \ $$  | $$     |  $$$$$$ | $$  \ $$  |  $$$$$$   /$$$$$$$| $$_/  | $$$$$$$$  \  $$ $$/  /$$$$$$$| $$  | $$| $$  | $$    '.colorize(:green)
+    puts '| $$\  $$$| $$  | $$  | $$ /$$  \____  $$| $$  | $$   \____  $$ /$$__  $$| $$    | $$_____/   \  $$$/  /$$__  $$| $$  | $$| $$  | $$ /$$'.colorize(:green)
+    puts '| $$ \  $$|  $$$$$$/  |  $$$$/  /$$$$$$$/|  $$$$$$/   /$$$$$$$/|  $$$$$$$| $$    |  $$$$$$$    \  $/  |  $$$$$$$|  $$$$$$/| $$  |  $$$$/'.colorize(:green)
+    puts '|__/  \__/ \______/    \___/   |_______/  \______/   |_______/  \_______/|__/     \_______/     \_/    \_______/ \______/ |__/   \___/  '.colorize(:green)
+    puts "_________________________________________________________________________________________________________________________________________".colorize(:yellow)
     puts "Lets keep your account info not so safe."
     puts "                                        "
   end
@@ -75,7 +81,8 @@ class CommandLineInterface
     puts "_____________________________________".colorize(:yellow)
     puts "Thank you for being not so safe."
     sleep 1
-    puts "Good Bye"
+    puts "Your information has been stolen"
     sleep 1
+    puts "Good Bye"
   end
 end

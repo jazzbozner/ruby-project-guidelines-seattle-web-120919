@@ -1,59 +1,88 @@
-# Module One Final Project Guidelines
+# Not So Safe Vault
+## WARNING: 
+### Do not keep important information stored in this program
 
-Congratulations, you're at the end of module one! You've worked crazy hard to get here and have learned a ton.
 
-For your final project, we'll be building a Command Line database application.
+## Features
+-Scrolling capabilities with TTT::Prompt
+-User friendly error feedback
+-Simple data structer
 
-## Project Requirements
+In order to persist information for Not So Safe Vault, this project applies skills such as:
+-Object Orientation
+-ActiveRecord
+-Ruby
+-Conditional Logic
+-SQLite3
 
-### Option One - Data Analytics Project
+Gems used for this program include:
+-tty-prompt
+-sinatra-activerecord
+-sqlite3
+-pry
+-require_all
+-activerecord, ~> 5.2.3
+-tty-prompt"
+-artii, ~> 2.1", ">= 2.1.2
+-colorize, ~> 0.8.1
 
-1. Access a Sqlite3 Database using ActiveRecord.
-2. You should have at minimum three models including one join model. This means you must have a many-to-many relationship.
-3. You should seed your database using data that you collect either from a CSV, a website by scraping, or an API.
-4. Your models should have methods that answer interesting questions about the data. For example, if you've collected info about movie reviews, what is the most popular movie? What movie has the most reviews?
-5. You should provide a CLI to display the return values of your interesting methods.  
-6. Use good OO design patterns. You should have separate classes for your models and CLI interface.
 
-  **Resource:** [Easy Access APIs](https://github.com/learn-co-curriculum/easy-access-apis)
+Not So Safe Vault install link: https://github.com/jazzbozner/ruby-project-guidelines-seattle-web-120919)
 
-### Option Two - Command Line CRUD App
+### How to Install
 
-1. Access a Sqlite3 Database using ActiveRecord.
-2. You should have a minimum of three models.
-3. You should build out a CLI to give your user full CRUD ability for at least one of your resources. For example, build out a command line To-Do list. A user should be able to create a new to-do, see all todos, update a todo item, and delete a todo. Todos can be grouped into categories, so that a to-do has many categories and categories have many to-dos.
-4. Use good OO design patterns. You should have separate models for your runner and CLI interface.
+1. Click on the link provided above
+2. Fork from repo
+3. Clone file to your machine
 
-### Brainstorming and Proposing a Project Idea
+### How to Run program
 
-Projects need to be approved prior to launching into them, so take some time to brainstorm project options that will fulfill the requirements above.  You must have a minimum of four [user stories](https://en.wikipedia.org/wiki/User_story) to help explain how a user will interact with your app.  A user story should follow the general structure of `"As a <role>, I want <goal/desire> so that <benefit>"`. In example, if we were creating an app to randomly choose nearby restaurants on Yelp, we might write:
+1. Open cloned file in your text editor
+2. In your terminal type:
+-rake db:migrate
+-rake db:seed
+-ruby bin/run.rb
+3. Program will start and prompt you to interact within terminal
 
-* As a user, I want to be able to enter my name to retrieve my records
-* As a user, I want to enter a location and be given a random nearby restaurant suggestion
-* As a user, I should be able to reject a suggestion and not see that restaurant suggestion again
-* As a user, I want to be able to save to and retrieve a list of favorite restaurant suggestions
+### Using Not So Safe Vault: MVP
 
-## Instructions
+1. Operator is able to show all Websites
+2. Operator is able to show all Users
+3. Operator is able to show all Accounts
+4. Operator is able to add Website
+5. Operator is able to add User
+6. Operator is able to add Account
+7. Operator is able to update Account Info
+8. Operator is able to delete Account Info
+9. Operator is able to exit program
 
-1. Fork and clone this repository.
-2. Build your application. Make sure to commit early and commit often. Commit messages should be meaningful (clearly describe what you're doing in the commit) and accurate (there should be nothing in the commit that doesn't match the description in the commit message). Good rule of thumb is to commit every 3-7 mins of actual coding time. Most of your commits should have under 15 lines of code and a 2 line commit is perfectly acceptable.
-3. Make sure to create a good README.md with a short description, install instructions, a contributors guide and a link to the license for your code.
-4. Make sure your project checks off each of the above requirements.
-5. Prepare a video demo (narration helps!) describing how a user would interact with your working project.
-    * The video should:
-      - Have an overview of your project.(2 minutes max)
-6. Prepare a presentation to follow your video.(3 minutes max)
-    * Your presentation should:
-      - Describe something you struggled to build, and show us how you ultimately implemented it in your code.
-      - Discuss 3 things you learned in the process of working on this project.
-      - Address, if anything, what you would change or add to what you have today?
-      - Present any code you would like to highlight.   
-7. *OPTIONAL, BUT RECOMMENDED*: Write a blog post about the project and process.
+### Stretch Goals
 
----
-### Common Questions:
-- How do I turn off my SQL logger?
-```ruby
-# in config/environment.rb add this line:
-ActiveRecord::Base.logger = nil
-```
+-Allowing the user to see when he last updated account info
+-Produce the last account that was created
+-Show all accounts that belong to specific user
+-Implement actual password verification and incription
+
+## Menu Interface
+![menu](photos/Menu.png)
+## Show All Pertenent Information
+![website](photos/websites.png)
+
+## Add User/Website
+![create](photos/create_website.png)
+
+## Add Account
+!(photos/add_account_name.png)
+!add_account_website.png
+!add_account_username.png
+!add_account_password.png
+
+## Update Account Info
+update_account_select.png
+
+## Delete Account Info
+delete.png
+
+## Exit
+![exit](exit.png)
+
