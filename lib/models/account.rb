@@ -123,14 +123,15 @@ class Account < ActiveRecord::Base
     options = User.all.map { |user| user.name }
     selection = $prompt.select(command, options)
     user_account = User.find_by(name: selection)
-    user_account_id = user_account.id
 
-    Account.all.select do |account|
-      account.user_id == user_account_id
-      puts "_________________________________________________________________________________________________"
-      puts "Website: #{account.website.url}"
-      puts "Username: #{account.username}"
-      puts "Password: #{account.password}"
+    Account.all.each do |account|
+      if account.user_id == user_account.id
+        # binding.pry
+        puts "_________________________________________________________________________________________________"
+        puts "Website: #{account.website.url}"
+        puts "Username: #{account.username}"
+        puts "Password: #{account.password}"
+      end
     end
   end
 end

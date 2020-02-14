@@ -43,6 +43,7 @@ class CommandLineInterface
       "Add Website",
       "Add User",
       "Add Account",
+      "Find Accounts By Name",
       "Update Account Info",
       "Delete Account Info",
       "Exit",
@@ -66,6 +67,9 @@ class CommandLineInterface
     elsif selection == "Add Account" #complete
       Account.add_account
       main_menu
+    elsif selection == "Find Accounts By Name" #complete
+      Account.find_accounts_by_name
+      main_menu
     elsif selection == "Update Account Info" #complete
       Account.update_account_info
       main_menu
@@ -81,7 +85,7 @@ class CommandLineInterface
     puts "_____________________________________".colorize(:yellow)
     puts "Thank you for being not so safe."
     sleep 1
-    puts "Your information has been stolen"
+    puts "Your information was stolen."
     sleep 1
     puts "Good Bye"
   end
