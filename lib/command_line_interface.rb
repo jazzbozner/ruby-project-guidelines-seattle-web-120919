@@ -21,7 +21,7 @@ class CommandLineInterface
     puts '| $$\  $$$| $$  | $$  | $$ /$$  \____  $$| $$  | $$   \____  $$ /$$__  $$| $$    | $$_____/   \  $$$/  /$$__  $$| $$  | $$| $$  | $$ /$$'.colorize(:green)
     puts '| $$ \  $$|  $$$$$$/  |  $$$$/  /$$$$$$$/|  $$$$$$/   /$$$$$$$/|  $$$$$$$| $$    |  $$$$$$$    \  $/  |  $$$$$$$|  $$$$$$/| $$  |  $$$$/'.colorize(:green)
     puts '|__/  \__/ \______/    \___/   |_______/  \______/   |_______/  \_______/|__/     \_______/     \_/    \_______/ \______/ |__/   \___/  '.colorize(:green)
-    puts "_________________________________________________________________________________________________________________________________________".colorize(:yellow)
+    puts "________________________________________________________________________________________________________________________________________".colorize(:yellow)
     puts "Lets keep your account info not so safe."
     puts "                                        "
   end
@@ -36,6 +36,7 @@ class CommandLineInterface
   def main_menu
     puts ""
     choices = "What would you like to accomplish? (Use arrow keys, press Enter to finish)"
+    puts "_________________________________________________________________________________________________".colorize(:yellow)
     options = [
       "Show all Websites",
       "Show all Users",
@@ -82,7 +83,7 @@ class CommandLineInterface
   end
 
   def exit_message
-    puts "_____________________________________".colorize(:yellow)
+    puts "_________________________________________________________________________________________________".colorize(:yellow)
     puts "Thank you for being not so safe."
     sleep 1
     puts "Your information was stolen."
