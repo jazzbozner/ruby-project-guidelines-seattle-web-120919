@@ -11,7 +11,6 @@ class Account < ActiveRecord::Base
       puts "Username: #{account.username}"
       puts "Password: #{account.password}"
     end
-    sleep 0.5
   end
 
   # allows you to add an account with existing user and website
@@ -117,5 +116,21 @@ class Account < ActiveRecord::Base
     end
     puts "_________________________________________________________________________________________________"
     puts "Account has been deleted!".colorize(:green)
+  end
+
+  def self.find_accounts_by_name
+    command = "Please select User? (Use arrow keys, press Space to select and Enter to finish)"
+    options = User.all.map { |user| user.name }
+    selection = $prompt.select(command, options)
+    user_account = User.find_by(name: selection)
+    user_account_id = user_account.id
+
+    Account.all.select do |account|
+      account.user_id == user_account_id
+      puts "_________________________________________________________________________________________________"
+      puts "Website: #{account.website.url}"
+      puts "Username: #{account.username}"
+      puts "Password: #{account.password}"
+    end
   end
 end

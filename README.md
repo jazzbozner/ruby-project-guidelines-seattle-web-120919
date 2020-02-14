@@ -90,3 +90,6 @@ Not So Safe Vault install link: https://github.com/jazzbozner/ruby-project-guide
 ## Exit
 ![exit](photos/exit.png)
 
+# Licenses
+https://www.gnu.org/licenses/gpl-3.0.en.html
+
