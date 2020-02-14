@@ -72,17 +72,20 @@ Not So Safe Vault install link: https://github.com/jazzbozner/ruby-project-guide
 ![create](photos/create_website.png)
 
 ## Add Account
-!(photos/add_account_name.png)
-!add_account_website.png
-!add_account_username.png
-!add_account_password.png
+![name](photos/add_account_name.png)
+
+![website](photos/add_account_website.png)
+
+![username](photos/add_account_username.png)
+
+![password](photos/add_account_password.png)
 
 ## Update Account Info
-update_account_select.png
+![update](photos/update_account_select.png)
 
 ## Delete Account Info
-delete.png
+![delete](photos/delete.png)
 
 ## Exit
-![exit](exit.png)
+![exit](photos/exit.png)
 
